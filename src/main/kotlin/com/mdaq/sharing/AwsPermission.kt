@@ -2,7 +2,6 @@ package com.mdaq.sharing
 
 import java.io.Serializable
 import javax.persistence.Column
-import javax.persistence.Embeddable
 import javax.persistence.Entity
 import javax.persistence.EnumType
 import javax.persistence.Enumerated

@@ -3,7 +3,7 @@ package com.mdaq.sharing
 import org.springframework.stereotype.Service
 
 @Service
-data class AwsPermissionService(val awsPermissionRepository: AwsPermissionRepository) {
+data class AwsPermissionService(private val awsPermissionRepository: AwsPermissionRepository) {
     fun newAwsPermission(awsPermission: AwsPermission): Long {
         if(awsPermission.id != null) {
             throw RuntimeException("New permission should not have id")
