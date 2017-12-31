@@ -34,3 +34,7 @@ data class AwsPermission(
 enum class Permission {
     VIEW_ONLY, MANAGEMENT
 }
+
+fun AwsPermission.toStringForLog(): String {
+    return "$username:$permission:$ec2Instance"
+}

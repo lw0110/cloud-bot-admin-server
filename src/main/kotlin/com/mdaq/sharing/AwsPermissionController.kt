@@ -4,9 +4,8 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class AwsPermissionController(private val repository: AwsPermissionRepository) {
+class AwsPermissionController(private val awsPermissionService: AwsPermissionService) {
 
 	@GetMapping("/aws-permission")
-	fun getAllAwsPermissions(): List<AwsPermission>
-    = repository.findAll().toList()
+	fun getAllAwsPermissions(): List<AwsPermission> = awsPermissionService.findAllPermissions()
 }
