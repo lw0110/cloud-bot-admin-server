@@ -1,5 +1,7 @@
-package com.mdaq.sharing
+package com.mdaq.sharing.service
 
+import com.mdaq.sharing.repo.AwsPermissionRepository
+import com.mdaq.sharing.model.AwsPermission
 import org.springframework.stereotype.Service
 
 @Service

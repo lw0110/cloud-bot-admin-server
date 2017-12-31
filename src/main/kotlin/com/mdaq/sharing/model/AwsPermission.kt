@@ -1,4 +1,4 @@
-package com.mdaq.sharing
+package com.mdaq.sharing.model
 
 import java.io.Serializable
 import javax.persistence.Column

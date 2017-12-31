@@ -1,5 +1,9 @@
 package com.mdaq.sharing
 
+import com.mdaq.sharing.controller.AwsPermissionController
+import com.mdaq.sharing.model.AwsPermission
+import com.mdaq.sharing.model.Permission
+import com.mdaq.sharing.service.AwsPermissionService
 import com.nhaarman.mockitokotlin2.argumentCaptor
 import com.nhaarman.mockitokotlin2.times
 import com.nhaarman.mockitokotlin2.verify

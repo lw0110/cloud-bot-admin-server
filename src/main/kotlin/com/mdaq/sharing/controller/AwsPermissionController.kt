@@ -1,5 +1,8 @@
-package com.mdaq.sharing
+package com.mdaq.sharing.controller
 
+import com.mdaq.sharing.model.AwsPermission
+import com.mdaq.sharing.model.toStringForLog
+import com.mdaq.sharing.service.AwsPermissionService
 import mu.KotlinLogging
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
