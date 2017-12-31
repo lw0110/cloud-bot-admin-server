@@ -28,7 +28,7 @@ class AwsPermissionController(private val awsPermissionService: AwsPermissionSer
     @PutMapping("/aws-permission")
     fun updateAwsPermission(@RequestBody awsPermission: AwsPermission) {
         LOGGER.info { "Receiving update aws permission post request with ${awsPermission.toStringForLog()}" }
-        awsPermissionService.updateAwsPersmission(awsPermission)
+        awsPermissionService.updateAwsPermission(awsPermission)
     }
 
     @DeleteMapping("/aws-permission/{id}")

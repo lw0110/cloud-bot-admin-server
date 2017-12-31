@@ -11,7 +11,7 @@ data class AwsPermissionService(private val awsPermissionRepository: AwsPermissi
         return awsPermissionRepository.save(awsPermission).id!!
     }
 
-    fun updateAwsPersmission(awsPermission: AwsPermission) {
+    fun updateAwsPermission(awsPermission: AwsPermission) {
         if(!awsPermissionRepository.existsById(awsPermission.id!!)) {
             throw RuntimeException("Permission with id ${awsPermission.id} exists in db already")
         }
