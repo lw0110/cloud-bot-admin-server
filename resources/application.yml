@@ -1,7 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost/testdb
-    username: postgres
-    password: mypassword
-    jpa:
-      generate-ddl: true
