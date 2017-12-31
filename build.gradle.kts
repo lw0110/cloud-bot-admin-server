@@ -47,6 +47,7 @@ dependencies {
 	compile("org.jetbrains.kotlin:kotlin-stdlib")
 	compile("org.jetbrains.kotlin:kotlin-reflect")
 	compile("com.fasterxml.jackson.module:jackson-module-kotlin")
+    compile("io.github.microutils:kotlin-logging:1.4.9")
     runtime("org.postgresql:postgresql:42.1.4")
 
     // TESTING
