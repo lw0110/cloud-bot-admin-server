@@ -48,6 +48,7 @@ dependencies {
 	compile("org.jetbrains.kotlin:kotlin-stdlib")
 	compile("org.jetbrains.kotlin:kotlin-reflect")
 	compile("com.fasterxml.jackson.module:jackson-module-kotlin")
+    compile("org.postgresql:postgresql:42.1.4")
 
     // TESTING
 	testCompile("org.springframework.boot:spring-boot-starter-test")

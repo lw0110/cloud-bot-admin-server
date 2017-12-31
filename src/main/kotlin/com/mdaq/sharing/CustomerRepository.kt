@@ -2,7 +2,7 @@ package com.mdaq.sharing
 
 import org.springframework.data.repository.CrudRepository
 
-interface CustomerRepository : CrudRepository<Customer, Long> {
+interface CustomerRepository : CrudRepository<AwsPermission, Long> {
 
-	fun findByLastName(lastName: String): Iterable<Customer>
+	fun findByLastName(lastName: String): Iterable<AwsPermission>
 }
