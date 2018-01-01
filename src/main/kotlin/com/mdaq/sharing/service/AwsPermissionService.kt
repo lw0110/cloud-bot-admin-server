@@ -2,6 +2,7 @@ package com.mdaq.sharing.service
 
 import com.mdaq.sharing.repo.AwsPermissionRepository
 import com.mdaq.sharing.model.AwsPermission
+import com.mdaq.sharing.model.Permission
 import org.springframework.stereotype.Service
 
 @Service
@@ -25,4 +26,7 @@ data class AwsPermissionService(private val awsPermissionRepository: AwsPermissi
     }
 
     fun findAllPermissions(): List<AwsPermission> = awsPermissionRepository.findAll().toList()
+
+    fun findByInstanceAndUsername(instance: String, username: String): Permission
+            = awsPermissionRepository.findByEc2InstanceAndUsername(instance, username).permission
 }

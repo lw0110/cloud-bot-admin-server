@@ -26,8 +26,8 @@ class AwsPermissionControllerTest {
         val TEST_USERNAME = "USERNAME"
         val TEST_PERMISSION = Permission.VIEW_ONLY
         val TEST_ID = 10L
-        val TEST_AWS_PERMISSION = AwsPermission(TEST_INSTANCE, TEST_USERNAME, TEST_PERMISSION)
-        val TEST_AWS_PERMISSION_WITH_ID = AwsPermission(TEST_INSTANCE, TEST_USERNAME, TEST_PERMISSION, TEST_ID)
+        val TEST_AWS_PERMISSION = AwsPermission(TEST_INSTANCE, TEST_USERNAME, TEST_PERMISSION, null)
+        val TEST_AWS_PERMISSION_WITH_ID = AwsPermission(TEST_INSTANCE, TEST_USERNAME, TEST_PERMISSION, null, TEST_ID)
     }
 
     @Mock private lateinit var awsPermissionService: AwsPermissionService
