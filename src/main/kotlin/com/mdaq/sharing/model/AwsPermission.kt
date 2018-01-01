@@ -12,7 +12,7 @@ import javax.persistence.UniqueConstraint
 
 @Entity
 @Table(name = "AWS_PERMISSION",
-        uniqueConstraints = [(UniqueConstraint(columnNames = arrayOf("USERNAME", "EC2_INSTANCE")))])
+        uniqueConstraints = [(UniqueConstraint(columnNames = ["USERNAME", "EC2_INSTANCE"]))])
 data class AwsPermission(
         @Column(name = "EC2_INSTANCE")
         val ec2Instance: String,
