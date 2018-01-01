@@ -30,6 +30,8 @@ data class AwsPermissionService(private val awsPermissionRepository: AwsPermissi
     fun findByInstanceAndUsername(instance: String, username: String): Permission
             = awsPermissionRepository.findByEc2InstanceAndUsername(instance, username).permission
 
+    fun findByPermission(permission: Permission): List<AwsPermission> = awsPermissionRepository.findByPermission(permission)
+
     inline private fun throwAwsPermissionMgtException(message: String): Nothing {
         // some special logic before exception
         throw RuntimeException(message)

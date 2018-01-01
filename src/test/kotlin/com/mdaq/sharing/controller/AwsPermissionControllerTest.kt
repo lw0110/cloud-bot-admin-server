@@ -1,6 +1,5 @@
-package com.mdaq.sharing
+package com.mdaq.sharing.controller
 
-import com.mdaq.sharing.controller.AwsPermissionController
 import com.mdaq.sharing.model.AwsPermission
 import com.mdaq.sharing.model.Permission
 import com.mdaq.sharing.service.AwsPermissionService
