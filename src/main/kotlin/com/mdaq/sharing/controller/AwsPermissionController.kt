@@ -2,6 +2,8 @@ package com.mdaq.sharing.controller
 
 import com.mdaq.sharing.model.AwsPermission
 import com.mdaq.sharing.model.Permission
+import com.mdaq.sharing.model.UserExt
+import com.mdaq.sharing.model.UserInfo
 import com.mdaq.sharing.model.toStringForLog
 import com.mdaq.sharing.service.AwsPermissionService
 import mu.KotlinLogging
@@ -48,6 +50,19 @@ class AwsPermissionController(private val awsPermissionService: AwsPermissionSer
     fun getPermissionByInstanceAndUsername(@RequestParam instance: String, @RequestParam username: String): Permission? {
         LOGGER.info { "Receiving get request to get permissions by instance $instance and username $username" }
         return awsPermissionService.findByInstanceAndUsername(instance, username)
+    }
+
+    @GetMapping("/user-info")
+    fun getDummyUserInfo(): UserInfo {
+        val userInfo = UserInfo()
+        userInfo.id = 10
+        userInfo.name = "John"
+        return userInfo
+    }
+
+    @PostMapping("/user-ext")
+    fun postUserExt(@RequestBody user: UserExt) {
+        LOGGER.info { "Received user ext $user" }
     }
 
 }
