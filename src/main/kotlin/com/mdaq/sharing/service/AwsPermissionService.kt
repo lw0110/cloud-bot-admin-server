@@ -27,8 +27,8 @@ data class AwsPermissionService(private val awsPermissionRepository: AwsPermissi
 
     fun findAllPermissions(): List<AwsPermission> = awsPermissionRepository.findAll().toList()
 
-    fun findByInstanceAndUsername(instance: String, username: String): Permission
-            = awsPermissionRepository.findByEc2InstanceAndUsername(instance, username).permission
+    fun findByInstanceAndUsername(instance: String, username: String): Permission?
+            = awsPermissionRepository.findByEc2InstanceAndUsername(instance, username)?.permission
 
     fun findByPermission(permission: Permission): List<AwsPermission> = awsPermissionRepository.findByPermission(permission)
 

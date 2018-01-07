@@ -22,7 +22,7 @@ data class AwsPermission(
 
         @Column(name = "ACCESS_PERMISSION")
         @Enumerated(value = EnumType.STRING)
-        val permission: Permission,
+        val permission: Permission = Permission.VIEW_ONLY,
 
         @Column(name = "COMMENT")
         val comment: String?,

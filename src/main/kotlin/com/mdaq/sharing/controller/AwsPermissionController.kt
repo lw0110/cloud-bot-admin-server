@@ -45,7 +45,7 @@ class AwsPermissionController(private val awsPermissionService: AwsPermissionSer
     }
 
     @GetMapping("/get-permission")
-    fun getPermissionByInstanceAndUsername(@RequestParam instance: String, @RequestParam username: String): Permission {
+    fun getPermissionByInstanceAndUsername(@RequestParam instance: String, @RequestParam username: String): Permission? {
         LOGGER.info { "Receiving get request to get permissions by instance $instance and username $username" }
         return awsPermissionService.findByInstanceAndUsername(instance, username)
     }
